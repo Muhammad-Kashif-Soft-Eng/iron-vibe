@@ -1079,10 +1079,52 @@ body:has(.hero) .brand span {
         color: $paper;
     }
 
+    .menu-toggle {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        padding: 0;
+        border-radius: 50%;
+        background: $orange;
+    }
+
+    .menu-toggle i {
+        width: 1.15rem;
+        height: 2px;
+        background: $ink;
+    }
+
+    body:has(.hero) .menu-toggle {
+        background: $lime;
+    }
+
+    .menu-toggle:focus-visible {
+        outline: 2px solid $orange;
+        outline-offset: 3px;
+    }
+
     .site-nav {
+        color: $ink;
         border: 0;
         border-radius: 1rem;
         box-shadow: var(--shadow);
+    }
+
+    .site-nav a:not(.button) {
+        color: $ink;
+    }
+
+    .site-nav a:not(.button):hover,
+    .site-nav a:not(.button).active {
+        color: $orange;
+    }
+
+    .site-nav .button--small {
+        background: $orange;
+        color: $ink;
     }
 
     .hero {
