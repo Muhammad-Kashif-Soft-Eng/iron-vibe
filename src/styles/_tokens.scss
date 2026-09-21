@@ -1,0 +1,18 @@
+$ink: #141516;
+$paper: #f5f2ec;
+$lime: #d7e85d;
+$orange: #ef7658;
+$blue: #d8e2dc;
+$muted: #747674;
+$line: rgba(20, 21, 22, .14);
+$display: 'Helvetica Neue', Arial, sans-serif;
+$body: 'Helvetica Neue', Arial, sans-serif;
+$space: clamp(1.25rem, 3vw, 3rem);
+
+:root {
+    --ink: #{$ink};
+    --paper: #{$paper};
+    --lime: #{$lime};
+    --orange: #{$orange};
+    --shadow: 0 1.25rem 3rem rgba(20, 21, 22, .1);
+}
