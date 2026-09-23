@@ -1,0 +1,219 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+@include responsive-tablet {
+    .hero {
+        min-height: 650px;
+    }
+
+    .intro,
+    .membership {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .intro p {
+        grid-column: 2;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .join-page {
+        gap: 3rem;
+    }
+}
+
+@include responsive-mobile {
+    .site-header {
+        padding: 1.25rem;
+        color: $ink;
+    }
+
+    body:has(.hero) .site-header {
+        color: $paper;
+    }
+
+    .menu-toggle {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        padding: 0;
+        border-radius: 50%;
+        background: $orange;
+
+        i {
+            width: 1.15rem;
+            height: 2px;
+            background: $ink;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $orange;
+            outline-offset: 3px;
+        }
+    }
+
+    body:has(.hero) .menu-toggle {
+        background: $lime;
+    }
+
+    .site-nav {
+        position: absolute;
+        top: 4.2rem;
+        left: 1.25rem;
+        right: 1.25rem;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        padding: 1.2rem;
+        border: 0;
+        border-radius: 1rem;
+        background: $paper;
+        box-shadow: var(--shadow);
+        color: $ink;
+
+        &.is-open {
+            display: flex;
+        }
+
+        a:not(.button) {
+            color: $ink;
+
+            &:hover,
+            &.active {
+                color: $orange;
+            }
+        }
+
+        .button--small {
+            background: $orange;
+            color: $ink;
+        }
+    }
+
+    .hero {
+        display: block;
+        min-height: 800px;
+        padding: 9rem 1.25rem 5rem;
+
+        &__copy {
+            max-width: 100%;
+
+            h1 {
+                max-width: 100%;
+                font-size: clamp(4rem, 19vw, 6.5rem);
+            }
+        }
+
+        &__visual {
+            position: absolute;
+            right: 1rem;
+            bottom: 6rem;
+            width: 80%;
+        }
+
+        &__circle {
+            width: 100%;
+            box-shadow: .8rem .8rem 0 rgba(215, 232, 93, .75);
+        }
+
+        &__stamp {
+            top: 0;
+            right: 0;
+        }
+
+        &__footer {
+            left: 1.25rem;
+            right: 1.25rem;
+        }
+    }
+
+    .intro,
+    .membership,
+    .manifesto,
+    .join-page {
+        display: block;
+    }
+
+    .intro__mark {
+        margin-bottom: 3rem;
+    }
+
+    .intro p {
+        margin-top: 2rem;
+    }
+
+    .program-grid,
+    .trainer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-card {
+        min-height: 21rem;
+    }
+
+    .manifesto h2,
+    .membership h2,
+    .join-banner h2 {
+        font-size: clamp(3.5rem, 16vw, 5.5rem);
+    }
+
+    .manifesto__image {
+        min-height: 27rem;
+    }
+
+    .manifesto__copy {
+        padding: 2.5rem 1.25rem 4rem;
+    }
+
+    .membership__intro {
+        margin-bottom: 3rem;
+    }
+
+    .quote-section {
+        padding: 4rem 1.25rem;
+
+        blockquote {
+            margin: 4rem 0 2rem;
+        }
+    }
+
+    .join-banner {
+        display: block;
+        padding: 5rem 1.25rem;
+
+        .button {
+            margin-top: 3rem;
+        }
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 1.25rem;
+
+        small {
+            grid-column: 1 / -1;
+        }
+    }
+
+    .join-page {
+        padding: 9rem 1.25rem 4rem;
+
+        &__heading {
+            margin-bottom: 3rem;
+
+            h1 {
+                font-size: clamp(4.25rem, 19vw, 6rem);
+            }
+        }
+    }
+
+    .join-form {
+        padding: 1.25rem;
+    }
+}

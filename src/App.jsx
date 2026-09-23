@@ -78,7 +78,7 @@ function Home() {
     <main>
       <section className="hero" id="top">
         <div className="hero__copy"><span className="eyebrow">Train different / Since 2014</span><h1>Built for<br /><em>more.</em></h1><p>A focused training space for people who are done waiting for motivation.</p><Link className="button" to="/join">Claim your first week <b>↗</b></Link></div>
-        <div className="hero__visual"><div className="hero__circle"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1100&q=85" alt="Athlete training with a battle rope" /></div><span className="hero__stamp">Stronger<br />by design</span><span className="hero__side-label">47° 36' 35" N<br />122° 19' 59" W</span></div>
+        <div className="hero__visual"><div className="hero__circle"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1100&q=85" alt="Athlete training with a battle rope" /></div><span className="hero__stamp">Stronger<br />by design</span></div>
         <div className="hero__footer"><span>Scroll to explore</span><span className="line" /><span>01 — 04</span></div>
       </section>
 
