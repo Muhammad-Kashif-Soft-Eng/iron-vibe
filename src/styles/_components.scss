@@ -157,10 +157,6 @@ body:has(.hero) .brand span {
     }
 
     &__footer {
-        color: rgba(245, 242, 236, .5);
-    }
-
-    &__footer {
         position: absolute;
         bottom: 2rem;
         left: max(1.5rem, calc((100vw - 1240px) / 2));
@@ -168,6 +164,7 @@ body:has(.hero) .brand span {
         display: flex;
         align-items: center;
         gap: 1rem;
+        color: rgba(245, 242, 236, .5);
         font-size: .6rem;
         letter-spacing: .12em;
         text-transform: uppercase;
